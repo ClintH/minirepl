@@ -17,11 +17,7 @@ See the [demo source](demo/index.html)
 In your HTML, pre-define the sample (and results even) as so:
 
 ```
-  <!-- Use class 'repl' to pick up default styling -->
   <code class="repl">
-    <!--
-      Repl can have some preset code and results:
-    -->
     <kbd>1 + 1</kbd>
     <samp>2</samp>
   </code>
@@ -33,7 +29,7 @@ In your HTML, pre-define the sample (and results even) as so:
 
 ## In Javascript
 
-The following snippets show how to initialise a mini REPL. Each instance is associated with a element.
+The following snippets show how to initialise. Each `Repl` instance is associated with an element.
 
 ```
 <script type="module">
@@ -54,9 +50,11 @@ r.activate();    // Activate REPL, creating a prompt
 r.input(string); // Sends some input to the REPL, as if the user typed it and hit enter
 ```
 
+If you intend on removing an element associated with a REPL, call `reset()` on it to avoid hanging event handlers.
+
 # Interaction
 
-User clicks on the box to create a prompt. They can type and hit ENTER, and whatever they have typed is evaluated. Reponses or errors are appended. Hitting ESC will clear the currently typed line. Clicking away from the REPL will remove the prompt if it's empty.
+User clicks on the REPL to create a prompt. They can type and hit ENTER, and whatever they have typed is evaluated. Reponses or errors are appended. Hitting ESC will clear the currently typed line. Clicking away from the REPL will remove the prompt if it's empty.
 
 A little button will appear in the top-left of the REPL to reset it back to its original contents. This can be withheld by setting `showMenu` to FALSE in the constructor:
 

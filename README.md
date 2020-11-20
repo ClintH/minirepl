@@ -1,5 +1,7 @@
 # minirepl
 
+![Demo](demo.gif)
+
 A mini Javascript REPL. Converts one-liner snippets into runnable code. 
 
 The purpose is to enliven tutorials/manual pages and allow small experimentation. The HTML content remains semantically pure, and degrades gracefully.
@@ -26,8 +28,8 @@ In your HTML, pre-define the sample (and results even) as so:
 ```
 
 * Use the `repl` class for the `<CODE>` block to pick up the styling provided by `repl.css`. Or style yourself.
-* Use `KBD` to show what the user would have typed
-* Use `SAMP` to show what the system response would be
+* Use `<KBD>` to show what the user would have typed
+* Use `<SAMP>` to show what the system response would be
 
 ## In Javascript
 
@@ -44,7 +46,7 @@ The following snippets show how to initialise a mini REPL. Each instance is asso
 </script>
 ```
 
-The REPL instance has a few basic commands if needed:
+A REPL instance has a few basic commands if needed:
 
 ```
 r.reset();       // Reset contents, remove prompt and deactivating

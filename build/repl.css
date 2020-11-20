@@ -1,0 +1,112 @@
+code.repl {
+  border: 1px solid darkgrey;
+  box-sizing: border-box;
+  background-color: white;
+  display: table;
+  padding-top: 0.5rem;
+  width: 10rem;
+  word-break: break-all;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+:not(.repl-changed)>button {
+  display: none;
+}
+
+code.repl>kbd, code.repl>samp {
+  display: block;
+  padding-left: 1rem;
+}
+
+code.repl>.repl-prompt.repl-activated {
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid silver;
+  padding-left: 0;
+}
+
+code.repl>samp {
+  color: gray;
+  text-indent: -1rem;
+  padding-left: 1rem;
+}
+
+code.repl>samp.repl-error {
+  color: red;
+}
+
+code.repl>samp::before {
+  content: '< ';
+  color: gainsboro;
+}
+
+code.repl>.repl-prompt::before {
+  content: '  ';
+  color: darkgray;
+}
+
+code.repl>.repl-prompt {
+  padding-left: 1rem;
+  outline:  none;
+}
+
+code.repl>.repl-prompt.repl-activated::before {
+  content: '> ';
+  color: cornflowerblue;
+  font-weight: bolder;
+}
+
+code.repl.repl-activated {
+
+}
+
+code.repl>button {
+  float: left;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -0.8rem;
+  margin-top: -0.5rem;
+  background-color: transparent;
+  opacity: 0.4;
+  filter: grayscale(100%);
+  border: none;
+  color: inherit;
+}
+code.repl>button:hover {
+  color: black;
+  opacity: 1.0;
+}
+
+@media (prefers-color-scheme: dark) {
+  code.repl {
+    border: 1px solid lightgray;
+    color: rgb(240, 240, 240);
+    background-color: rgb(58, 49, 49);
+  }
+  code.repl.repl-activated {
+
+  }
+  code.repl>samp {
+    color: rgb(197, 197, 197);
+  }
+  code.repl>samp::before {
+    color: rgb(145, 145, 145);
+  }
+  code.repl>samp.repl-error {
+    color: rgb(247, 136, 136);
+  }
+  code.repl>.repl-prompt.repl-activated::before {
+    color: rgb(132, 168, 235);
+  }
+
+  code.repl>.repl-prompt.repl-activated {
+    border-top: 1px solid rgb(87, 87, 87);
+  }
+  
+  code.repl>button:hover {
+    color: rgb(135, 250, 3);
+  }
+}

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>repl demo</title>
+</head>
+
+<body>
+  <h1>repl demo</h1>
+  <!-- Use class 'repl' to pick up default styling -->
+  <code class="repl">
+    <!--
+      Repl can have some preset code and results:
+    -->
+    <kbd>1 + 1</kbd>
+    <samp>2</samp>
+  </code>
+
+  <script type="module">
+    import { Repl } from "../build/index.js"
+    // Create a repl for a single element:
+    //const r = new Repl(document.querySelector('code'));
+
+    // Create a repl for all matching elements:
+    Repl.create(document.querySelectorAll('code.repl'));
+  </script>
+  <link rel="stylesheet" href="../build/repl.css" />
+</body>
+
+</html>

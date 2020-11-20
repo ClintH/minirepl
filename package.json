@@ -1,0 +1,20 @@
+{
+  "name": "minirepl",
+  "version": "0.0.2",
+  "description": "Mini Javascript REPL",
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "repository": "https://github.com/clinth/minirepl",
+  "files": [
+    "build/"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "repl"
+  ],
+  "author": "Clint Heyer",
+  "license": "MIT"
+}

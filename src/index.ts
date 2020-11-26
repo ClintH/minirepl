@@ -85,12 +85,11 @@ class Repl {
 
   }
 
-  result(r: string, isError = false) {
+  private result(r: string, isError = false) {
     const s = document.createElement('samp');
     s.innerText = r;
     if (isError) s.classList.add('repl-error');
     this.el.appendChild(s);
-
     this.createPrompt();
   }
 
@@ -114,14 +113,14 @@ class Repl {
     }
   }
 
-  focusPrompt() {
+  private focusPrompt() {
     // TODO: Put cursor at end of line
     const p = this.prompt;
     if (p === undefined) return;
     p.focus();
   }
 
-  createPrompt() {
+  private createPrompt() {
     if (this.prompt) return;
 
     const p = document.createElement('kbd');
@@ -148,7 +147,7 @@ class Repl {
     this.focusPrompt();
   }
 
-  destroyPrompt(leaveContents = false) {
+  private destroyPrompt(leaveContents = false) {
     const p = this.prompt;
     if (p === undefined) return;
     p.onkeyup = null;
@@ -162,7 +161,7 @@ class Repl {
     this.prompt = undefined;
   }
 
-  deactivate() {
+  private deactivate() {
     if (!this.activated) return;
     this.activated = false;
     this.el.classList.remove('repl-activated');
